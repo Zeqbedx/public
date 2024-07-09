@@ -1,1 +1,1 @@
-# Testing VSC to GIT 2
+# Testing VSC to GIT
