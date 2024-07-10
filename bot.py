@@ -1,1 +1,0 @@
-# Testing VSC to GIT
