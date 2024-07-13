@@ -4,7 +4,7 @@ services please join my discord at: https://discord.gg/Zd4G2a42Mu
 Thanks, Zeqbed!
 
 ## Installations
-- pip install dotenv, logging, discord.py, aiohttp
+- pip install dotenv logging discord.py aiohttp
 
 ## Usage
 
