@@ -1,5 +1,5 @@
 Hello! Thanks for downloading and using my bot, if you would like to stay up to date or purchase any of my 
-services please join my discord at: https://discord.gg/Zd4G2a42Mu
+services please join my discord at: https://discord.gg/T7Fbfd9cuf
 
 Thanks, Zeqbed! 
 

@@ -1,3 +1,8 @@
+Hello! Thanks for downloading and using my bot, if you would like to stay up to date or purchase any of my 
+services please join my discord at: https://discord.gg/T7Fbfd9cuf
+
+Thanks, Zeqbed! 
+
 ## Installations
 - pip install dotenv pillow discord.py requests
 
