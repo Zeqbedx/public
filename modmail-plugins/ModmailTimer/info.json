@@ -1,10 +1,8 @@
 {
-    "name": "Zeqbed",
-    "description": [
-        "N/A"
-    ],
-    "authors": ["Zeqbed"],
+    "name": "ModmailTimer",
     "version": "1.0.0",
+    "description": "A plugin that updates ticket channel names based on response times",
+    "authors": ["Zeqbed"],
     "bot_version": "4.0.0",
-    "dpy_version": "2.0.0"
+    "files": ["modmailtimer.py"]
 }
