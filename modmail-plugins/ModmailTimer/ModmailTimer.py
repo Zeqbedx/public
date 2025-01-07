@@ -2,16 +2,19 @@ import discord
 from discord.ext import commands
 import asyncio
 from datetime import datetime, timezone
-import typing
 
-class ModMailTimer(commands.Cog):
+class ModmailTimer(commands.Cog):
+    """
+    Timer plugin for ModMail that updates channel names based on response time.
+    """
+
     def __init__(self, bot):
         self.bot = bot
-        self.db = bot.plugin_db.get_partition(self)
+        self.db = bot.api.get_plugin_partition(self)
         self.ticket_timers = {}
         self.checking = asyncio.Lock()
         self.bot.loop.create_task(self.check_timers())
-
+        
     async def check_timers(self):
         await self.bot.wait_until_ready()
         while not self.bot.is_closed():
@@ -34,11 +37,11 @@ class ModMailTimer(commands.Cog):
                                     await thread.channel.edit(name=f"{new_emoji}︱{thread.channel.name.split('︱')[1]}")
                                     self.ticket_timers[channel_id]['current_emoji'] = new_emoji
                             except Exception as e:
-                                print(f"Error updating channel name: {e}")
+                                self.bot.log.error(f"Error updating channel name: {e}")
                 except Exception as e:
-                    print(f"Error in timer check: {e}")
+                    self.bot.log.error(f"Error in timer check: {e}")
             
-            await asyncio.sleep(60)
+            await asyncio.sleep(60)  # Check every minute
 
     def get_status_emoji(self, minutes: float) -> str:
         if minutes <= 15:
@@ -69,4 +72,4 @@ class ModMailTimer(commands.Cog):
                 }
 
 async def setup(bot):
-    await bot.add_cog(ModMailTimer(bot))
+    await bot.add_cog(ModmailTimer(bot))
